@@ -1,0 +1,9 @@
+com\example\enrollmentservice\EnrollmentServiceApplication.class
+com\example\enrollmentservice\entity\Enrollment.class
+com\example\enrollmentservice\service\EnrollmentService.class
+com\example\enrollmentservice\controller\EnrollmentController.class
+com\example\enrollmentservice\client\StudentClient$StudentDTO.class
+com\example\enrollmentservice\client\StudentClient.class
+com\example\enrollmentservice\client\CourseClient$CourseDTO.class
+com\example\enrollmentservice\client\CourseClient.class
+com\example\enrollmentservice\repository\EnrollmentRepository.class

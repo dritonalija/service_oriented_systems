@@ -1,0 +1,11 @@
+com\example\monolith\controller\EnrollmentController.class
+com\example\monolith\entity\Enrollment.class
+com\example\monolith\MonolithApplication.class
+com\example\monolith\controller\StudentController.class
+com\example\monolith\controller\EnrollmentController$EnrollmentRequest.class
+com\example\monolith\repository\StudentRepository.class
+com\example\monolith\repository\EnrollmentRepository.class
+com\example\monolith\controller\CourseController.class
+com\example\monolith\entity\Course.class
+com\example\monolith\repository\CourseRepository.class
+com\example\monolith\entity\Student.class
