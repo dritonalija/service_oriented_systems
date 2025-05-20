@@ -104,7 +104,3 @@ Projektet përfshijnë plane testimi JMeter për:
 3. Kredencialet e paracaktuara:
    - Grafana: admin/admin
    - MySQL: root/root
-
-## Kontributori
-
-Ky projekt është krijuar si pjesë e projektit të diplomimit në FIEK.
