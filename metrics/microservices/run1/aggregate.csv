@@ -1,0 +1,8 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Sent KB/sec
+View All Students,200,8,6,9,23,32,4,276,0.000%,2.64313,9.13,0.32
+Create Student,200,20,17,30,46,64,11,179,0.000%,2.64795,0.53,0.63
+View All Courses,200,8,6,9,23,30,4,262,0.000%,2.65728,9.18,0.32
+Create Course,200,20,16,33,48,56,13,161,0.000%,2.66464,0.54,0.63
+View All Enrollments,200,8,6,8,16,27,4,287,0.000%,2.67065,10.01,0.33
+Create Enrollment,200,20,17,27,42,64,12,203,0.000%,2.67877,0.55,0.84
+TOTAL,1200,14,14,23,34,64,4,287,0.000%,15.32743,28.78,2.95
