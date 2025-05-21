@@ -80,6 +80,21 @@ Arkitektura me mikroservise përdor:
    docker-compose up --build
    ```
 
+3. **Për të ndaluar shërbimet dhe fshirë të gjitha të dhënat (volumet):**
+   ```bash
+   docker-compose down -v
+   ```
+   Ky komandë do të:
+   - Ndalojë të gjitha kontejnerët
+   - Fshijë të gjitha volumet (përfshirë të dhënat e databazës)
+   - Fshijë të gjitha imazhet e krijuara
+   - Fshijë të gjitha rrjetet e krijuara
+
+4. **Për të ndaluar shërbimet pa fshirë të dhënat:**
+   ```bash
+   docker-compose down
+   ```
+
 Shërbimet do të jenë të aksesueshme në:
 - Student Service: `http://localhost:8081`
 - Course Service: `http://localhost:8082`

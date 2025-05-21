@@ -1,6 +1,6 @@
 global:
-  scrape_interval: 15s
-  evaluation_interval: 15s
+  scrape_interval: 5s
+  evaluation_interval: 5s
 
 scrape_configs:
   - job_name: 'student-service'
@@ -16,4 +16,9 @@ scrape_configs:
   - job_name: 'enrollment-service'
     metrics_path: '/actuator/prometheus'
     static_configs:
-      - targets: ['enrollment-service:8083'] 
+      - targets: ['enrollment-service:8083']
+
+  - job_name: 'jmeter'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['localhost:9270'] 
