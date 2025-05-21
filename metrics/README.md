@@ -4,20 +4,29 @@
 - [Memory Consumption Metrics: Monolithic vs Microservices Architecture](#memory-consumption-metrics-monolithic-vs-microservices-architecture)
   - [Table of Contents](#table-of-contents)
   - [Monolithic Application Test Runs](#monolithic-application-test-runs)
+    - [Monolith Memory Stats](#monolith-memory-stats)
     - [Run 1 (10 Users)](#run-1-10-users)
     - [Run 2 (50 Users)](#run-2-50-users)
     - [Run 3 (100 Users)](#run-3-100-users)
     - [Run 4 (200 Users)](#run-4-200-users)
   - [Microservices Application Test Runs](#microservices-application-test-runs)
     - [Microservices Memory Stats (Heap Usage)](#microservices-memory-stats-heap-usage)
-    - [Monolith Memory Stats](#monolith-memory-stats)
-  - [Monolith vs Microservices Memory Stats](#monolith-vs-microservices-memory-stats)
     - [Run 1 (10 Users) - Microservices](#run-1-10-users---microservices)
     - [Run 2 (50 Users) - Microservices](#run-2-50-users---microservices)
     - [Run 3 (100 Users) - Microservices](#run-3-100-users---microservices)
     - [Run 4 (200 Users) - Microservices](#run-4-200-users---microservices)
+  - [Monolith vs Microservices Memory Stats](#monolith-vs-microservices-memory-stats)
 
 ## Monolithic Application Test Runs
+
+### Monolith Memory Stats
+
+| Testimi | Mean    | Max     | Min     | StdDev   |
+|---------|---------|---------|---------|----------|
+| 10u     | 59.8 MiB| 60.3 MiB| 59.3 MiB| 512 KiB  |
+| 50u     | 62.7 MiB| 63.1 MiB| 62.1 MiB| 502 KiB  |
+| 100u    | 76.9 MiB| 118 MiB | 45.8 MiB| 28.6 MiB |
+| 200u    | 85.7 MiB| 152 MiB | 38.9 MiB| 44.2 MiB |
 
 ### Run 1 (10 Users)
 ![Monolithic Memory Usage - 10 Users](monolith/run1/monolith_memory_10u.png)
@@ -170,23 +179,7 @@ Memory Consumption Metrics:
 | 100u    | 181 MiB| 211 MiB| 153 MiB| 18.0 MiB |
 | 200u    | 249 MiB| 318 MiB| 151 MiB| 56.0 MiB |
 
-### Monolith Memory Stats
 
-| Testimi | Mean    | Max     | Min     | StdDev   |
-|---------|---------|---------|---------|----------|
-| 10u     | 59.8 MiB| 60.3 MiB| 59.3 MiB| 512 KiB  |
-| 50u     | 62.7 MiB| 63.1 MiB| 62.1 MiB| 502 KiB  |
-| 100u    | 76.9 MiB| 118 MiB | 45.8 MiB| 28.6 MiB |
-| 200u    | 85.7 MiB| 152 MiB | 38.9 MiB| 44.2 MiB |
-
-## Monolith vs Microservices Memory Stats
-
-| Testimi | Monolith Mean | Microservices Mean | Monolith Max | Microservices Max | Monolith Min | Microservices Min | Monolith StdDev | Microservices StdDev |
-|---------|---------------|-------------------|--------------|-------------------|--------------|-------------------|------------------|----------------------|
-| 10u     | 59.8 MiB      | 163 MiB           | 60.3 MiB     | 203 MiB           | 59.3 MiB     | 122 MiB           | 512 KiB          | 21.1 MiB             |
-| 50u     | 62.7 MiB      | 171 MiB           | 63.1 MiB     | 198 MiB           | 62.1 MiB     | 151 MiB           | 502 KiB          | 13.7 MiB             |
-| 100u    | 76.9 MiB      | 181 MiB           | 118 MiB      | 211 MiB           | 45.8 MiB     | 153 MiB           | 28.6 MiB         | 18.0 MiB             |
-| 200u    | 85.7 MiB      | 249 MiB           | 152 MiB      | 318 MiB           | 38.9 MiB     | 151 MiB           | 44.2 MiB         | 56.0 MiB             |
 
 ### Run 1 (10 Users) - Microservices
 ![Microservices Memory Usage - 10 Users](microservices/run1/microservices_memory_10u.png)
@@ -327,3 +320,13 @@ Memory Consumption Metrics:
 | View All Enrollments | 4000 | 12 | 9 | 24 | 33 | 53 | 4 | 349 | 0.000% | 50.36768 | 4008.04 | 6.30 |
 | Create Enrollment | 4000 | 26 | 23 | 37 | 46 | 76 | 10 | 212 | 0.000% | 50.43882 | 10.52 | 15.96 |
 | TOTAL | 24000 | 19 | 18 | 32 | 40 | 62 | 3 | 349 | 0.000% | 290.71176 | 10780.59 | 56.16 | 
+
+## Monolith vs Microservices Memory Stats
+
+| Testimi | Monolith Mean | Microservices Mean | Monolith Max | Microservices Max | Monolith Min | Microservices Min | Monolith StdDev | Microservices StdDev |
+|---------|---------------|-------------------|--------------|-------------------|--------------|-------------------|------------------|----------------------|
+| 10u     | 59.8 MiB      | 163 MiB           | 60.3 MiB     | 203 MiB           | 59.3 MiB     | 122 MiB           | 512 KiB          | 21.1 MiB             |
+| 50u     | 62.7 MiB      | 171 MiB           | 63.1 MiB     | 198 MiB           | 62.1 MiB     | 151 MiB           | 502 KiB          | 13.7 MiB             |
+| 100u    | 76.9 MiB      | 181 MiB           | 118 MiB      | 211 MiB           | 45.8 MiB     | 153 MiB           | 28.6 MiB         | 18.0 MiB             |
+| 200u    | 85.7 MiB      | 249 MiB           | 152 MiB      | 318 MiB           | 38.9 MiB     | 151 MiB           | 44.2 MiB         | 56.0 MiB             |
+
